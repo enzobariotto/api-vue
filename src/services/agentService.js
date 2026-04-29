@@ -9,3 +9,14 @@ export async function fetchAgents(){
 
     return response.json();
 }
+
+export async function fetchAgent(uuid) {
+    const response = await fetch(`${BASE_URL}/v1/agents/${uuid}`)
+
+    if (!response.ok) {
+        throw new Error(`Erro ${response.status}`)
+    }
+
+    return response.json()
+}
+
