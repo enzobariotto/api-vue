@@ -27,5 +27,5 @@
         <h1>{{ agent.displayName }}</h1>
         <img :src="agent.displayIcon" width="150" />
         <p>{{ agent.description }}</p>
-    </div>
+    </div>-
 </template>
