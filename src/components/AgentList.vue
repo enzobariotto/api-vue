@@ -3,6 +3,7 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
+// defineProps: declara os dados que esse componente recebe do componente pai
 const props = defineProps({
   agents: {
     type: Array,
@@ -11,6 +12,7 @@ const props = defineProps({
 })
 
 function goToAgent(uuid) {
+  // router.push navega para outra rota sem recarregar a página
   router.push({ name: 'agent-detail', params: { uuid } })
 }
 </script>

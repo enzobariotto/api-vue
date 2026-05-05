@@ -4,15 +4,15 @@ import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { fetchAgent } from '@/services/agentService'
 
-const route = useRoute()
-const router = useRouter()
+const route = useRoute()   // lê informações da URL atual (ex: route.params.uuid)
+const router = useRouter() // usado para navegar entre rotas (ex: router.back())
 const agent = ref(null)
 const loading = ref(true)
 const error = ref(null)
 
 onMounted(async () => {
   try {
-    const response = await fetchAgent(route.params.uuid)
+    const response = await fetchAgent(route.params.uuid) // lê o :uuid que está na URL
     agent.value = response.data
   } catch (err) {
     error.value = err.message
