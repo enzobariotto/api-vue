@@ -1,3 +1,5 @@
+//reutilizavel, lógica de negócio relacionada aos agentes, busca os dados da API e gerencia o estado de carregamento e erros
+
 import { ref, onMounted } from 'vue';
 import { fetchAgents } from '@/services/agentService';
 

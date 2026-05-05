@@ -1,4 +1,5 @@
-const BASE_URL = 'https://valorant-api.com';
+//comunicação com a API, endereço base
+const BASE_URL = 'https://valorant-api.com'; 
 
 export async function fetchAgents(){
     const response = await fetch(`${BASE_URL}/v1/agents`)
